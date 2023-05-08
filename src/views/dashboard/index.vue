@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">股票型基金管理系统-后台管理</div>
   </div>
 </template>
 

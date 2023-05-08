@@ -32,15 +32,20 @@ const actions = {
   login({ commit }, userInfo) {
     const { username, password } = userInfo
     return new Promise((resolve, reject) => {
-      login({ username: username.trim(), password: password }).then(response => {
-        const { data } = response
+      login({ phoneNumber: username.trim(), password: password }).then(response => {
+        const { data } = response.data.data
         commit('SET_TOKEN', data.token)
         setToken(data.token)
+        localStorage.setItem("token", response.data.data.token);
+        localStorage.setItem("headImgUrl", response.data.data.headImgUrl);
+        localStorage.setItem("id", response.data.data.id);
+        localStorage.setItem("name", response.data.data.name);
         resolve()
       }).catch(error => {
-        reject(error)
+        resolve()
       })
     })
+
   },
 
   // get user info
