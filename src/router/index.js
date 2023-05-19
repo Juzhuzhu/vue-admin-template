@@ -106,6 +106,12 @@ export const constantRoutes = [
         meta: { title: '用户信息', icon: 'table' },
       },
       {
+        path: "/userBalance",
+        name: "UserBalance",
+        component: () => import("@/views/user/UserBalance.vue"),
+        meta: { title: '用户持有基金', icon: 'table' },
+      },
+      {
         path: "/updateUserComponent",
         name: "UpdateUserComponent",
         component: () => import("@/views/user/UpdateUserComponent")
