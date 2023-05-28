@@ -51,7 +51,7 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '主页', icon: 'el-icon-s-promotion' }
     }]
   },
 
@@ -60,7 +60,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: '基金管理', icon: 'el-icon-s-help' },
+    meta: { title: '基金管理', icon: 'el-icon-postcard' },
     children: [
       // {
       //   path: 'table',
@@ -97,7 +97,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: "/UserList/user",
     name: 'UserList',
-    meta: { title: '用户管理', icon: 'el-icon-s-help' },
+    meta: { title: '用户管理', icon: 'el-icon-s-custom' },
     children: [
       {
         path: "/userList",

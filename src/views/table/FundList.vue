@@ -80,17 +80,12 @@ export default {
         url: url,
         data: { pageNumber: pageNum, pageSize: pageSize, fundCode: fundCode, fundName: fundName }
       }).then(res => {
-        // var i = localStorage.getItem("token");
-        // console.log("token:" + i);
         // 获取表格数据
         this.tableData = res.data.data.records
         // 获取页码数据
         this.pageInfo.pageNumber = res.data.data.current
         this.pageInfo.pageSize = res.data.data.size
         this.pageInfo.total = res.data.data.total
-        // console.log("当前第" + this.pageInfo.pageNumber + "页，当前页有" + this.pageInfo.pageSize + "条数据，共" + this.pageInfo.total + "条")
-        // console.log(res);
-        // console.log(this.tableData);
       })
     },
     // 查询基金历史净值
